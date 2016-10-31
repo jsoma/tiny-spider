@@ -24,7 +24,12 @@ export default class BaseEdgeComputer {
       Nodes have a label, an id, and all of the other data.
     */
     this._nodes = Object.values(tempNodes)
-    this._nodes.forEach((n, i) => { n.id = i })
+    this.setNodeIds()
+  }
+
+  setNodeIds () {
+    // this._nodes.forEach((n, i) => { n.id = i })
+    this._nodes.forEach((n, i) => { n.id = n.label })
   }
 
   computeGroups () {

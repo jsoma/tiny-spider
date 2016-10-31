@@ -14,7 +14,7 @@ export default class BigraphEdgeComputer extends BaseEdgeComputer {
     }
 
     this._nodes = Object.values(tempNodes)
-    this._nodes.forEach((n, i) => { n.id = i })
+    this.setNodeIds()
   }
 
   /*
@@ -44,12 +44,14 @@ export default class BigraphEdgeComputer extends BaseEdgeComputer {
       for (let j = 0; j < i; j++) {
         let w = this.undirectedWeight(labels[i], labels[j])
         if (w > 0) {
+          const source = this._nodes[i]
+          const target = this._nodes[j]
           edges.push({
             type: 'default',
-            source: i,
-            source_name: labels[i],
-            target: j,
-            target_name: labels[j],
+            source: source.id,
+            source_name: source.label,
+            target: target.id,
+            target_name: target.label,
             weight: w
           })
         }

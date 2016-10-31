@@ -18,11 +18,8 @@ export default class SimpleEdgeComputer extends BaseEdgeComputer {
       }
     }
 
-    /*
-      Nodes have a label, an id, and all of the other data.
-    */
     this._nodes = Object.values(tempNodes)
-    this._nodes.forEach((n, i) => { n.id = i })
+    this.setNodeIds()
   }
 
   computeEdges () {
@@ -45,12 +42,14 @@ export default class SimpleEdgeComputer extends BaseEdgeComputer {
 
           let w = this.directedWeight(labels[i], labels[j], type)
           if (w > 0) {
+            const source = this._nodes[i]
+            const target = this._nodes[j]
             edges.push({
-              type: type,
-              source: i,
-              source_name: labels[i],
-              target: j,
-              target_name: labels[j],
+              type: 'default',
+              source: source.id,
+              source_name: source.label,
+              target: target.id,
+              target_name: target.label,
               weight: w
             })
           }
