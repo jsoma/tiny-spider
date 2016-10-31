@@ -45,7 +45,7 @@ export default class SimpleEdgeComputer extends BaseEdgeComputer {
             const source = this._nodes[i]
             const target = this._nodes[j]
             edges.push({
-              type: 'default',
+              type: type,
               source: source.id,
               source_name: source.label,
               target: target.id,
