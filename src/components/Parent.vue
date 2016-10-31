@@ -10,6 +10,12 @@
     <div class="container">
       <LongCSV></LongCSV>
     </div>
+    <div class="note">
+      <div class="container">
+        <h4>I'm making a YouTube series about network visualization!</h4>
+        <p>Sign up for <a href="http://tinyletter.com/jsoma">my never-ever-sent newsletter</a> to find out when it's out and about.
+      </div>
+    </div>
     <div class="footer">
       <div class="container">
         <div class="col-sm-12 col-md-6">
@@ -18,11 +24,14 @@
             <p>I also co-host talks about food science and culture in a semi-monthly lecture series called <a href="http://omgmsg.com">Masters of Social Gastronomy</a>. <a href="https://soundcloud.com/msgpodcast">We have a podcast</a> that doesn't get updated nearly often enough.</p>
         </div>
 <div class="col-sm-6 col-md-3">
+
             <p><strong>Track me down</strong></p>
-            <p><a target="_new" href="mailto:jonathan.soma@gmail.com">jonathan.soma@gmail.com</a></p>
-            <p><a target="_new" href="https://twitter.com/dangerscarf">@dangerscarf</a></p>
-            <p><a target="_new" href="http://jonathansoma.com">jonathansoma.com</a></p>
-            <p><a target="_new" href="https://github.com/jsoma">GitHub</a></p>
+            <p><a target="_new" href="mailto:jonathan.soma@gmail.com">jonathan.soma@gmail.com</a>
+            / <a target="_new" href="https://twitter.com/dangerscarf">@dangerscarf</a>
+            / <a target="_new" href="http://jonathansoma.com">jonathansoma.com</a>
+            / <a target="_new" href="https://github.com/jsoma">GitHub</a>
+            / <a target="_new" href="https://www.youtube.com/channel/UCg3t2I9DIsU1HxNOHoPcLlw">Youtube</a>
+            / <a target="_new" href="http://tinyletter.com/jsoma">TinyLetter</a>
           </div>
       </div>
     </div>
@@ -45,7 +54,7 @@ textarea {
   font-family: Inconsolata, "Courier New";
 }
 .masthead {
-  background: #efffff;
+  background: #c6f6f6;
   padding: 30px 0;
 }
 .footer {
@@ -62,5 +71,10 @@ textarea {
 .footer a:hover {
   color: #23527c;
   text-decoration: underline;
+}
+.note {
+  background: #fffcc0;
+  padding: 15px 0;
+  margin-bottom: 15px;
 }
 </style>
