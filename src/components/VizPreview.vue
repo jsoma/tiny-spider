@@ -32,10 +32,23 @@ export default {
       let a = d3.select('#viz-preview').node().parentNode.getBoundingClientRect()
       let b = d3.select('#viz-preview').node().getBoundingClientRect()
 
-      this.width = d3.min([b.width, a.width])
-      this.height = a.height - (b.top - a.top) - 10
+      let updated = false
 
-      this.draw()
+      let newWidth = d3.min([b.width, a.width])
+      if (newWidth !== this.width) {
+        this.width = newWidth
+        updated = true
+      }
+
+      let newHeight = a.height - (b.top - a.top) - 10
+      if (newHeight !== this.height) {
+        this.height = newHeight
+        updated = true
+      }
+
+      if (updated) {
+        this.draw()
+      }
     },
     draw () {
       if (!this.json) {
